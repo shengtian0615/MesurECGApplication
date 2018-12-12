@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/ecg_data_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/ecg_hist_hr_bg" >
+
+        <TextView
+            android:id="@+id/textView_heartbeat_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/y8"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_heartbeat_number"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/y8"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:paddingTop="@dimen/y5"
+            android:text="@string/heart_rate"
+            android:textColor="@color/menu_btn_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ecg_datal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_marginRight="@dimen/x5"
+        android:orientation="horizontal" >
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="@dimen/y80"
+            android:layout_gravity="bottom"
+            android:background="@drawable/orige_img"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="@color/white_color"
+            android:paddingRight="@dimen/x30"
+            android:paddingLeft="@dimen/x30"
+            android:id="@+id/ecg_data_print"
+            android:focusable="false"
+            android:text="打印"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:id="@+id/ecg_datal31"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ecg_data_reportimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:background="@drawable/ecg_doct_repimg" />
+
+            <TextView
+                android:id="@+id/ecg_data_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3"
+                android:focusable="false"
+                android:text="@string/doctor_report" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ecg_data_l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_ecgdata_upload_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/uploaded"
+                android:textSize="18sp"
+                android:textColor="@color/menu_btn_text"/>
+
+            <Button
+                android:id="@+id/ecg_data_del"
+                android:layout_width="@dimen/x90"
+                android:layout_height="@dimen/y80"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/delete_img"
+                android:focusable="false"
+                android:paddingLeft="@dimen/x8"
+                android:paddingRight="@dimen/x8" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ecg_data_l1"
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_marginRight="@dimen/x5"
+        android:layout_toLeftOf="@id/ecg_datal3"
+        android:layout_toRightOf="@id/ecg_data_l1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_collectionTime_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text_white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_diag_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="@color/menu_btn_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView_diag_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:maxLines="3"
+            android:padding="@dimen/y5"
+            android:textColor="@color/text_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

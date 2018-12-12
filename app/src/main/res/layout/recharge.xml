@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/ecg_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/recharge"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="33sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_height="150dp"
+        android:id="@+id/rechl1">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rechar_balance"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="28sp"
+            android:id="@+id/rechar_meddle_title"/>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rechar_meddle_title"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_fe0100"
+                android:textSize="28sp"
+                android:text="￥"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rechar_balance_num"
+                android:textColor="@color/color_fe0100"
+                android:textSize="28sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_fe0100"
+                android:textSize="28sp"
+                android:text="元"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rechl1"
+        android:id="@+id/rechl2"
+        android:background="@color/color_3f4554">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+       		android:layout_marginLeft="40dp"
+            android:id="@+id/rechar_type_name"
+            android:text="@string/rechar_typen"
+            android:textSize="28sp"/>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_below="@id/rechar_type_name"
+            android:layout_height="80dp"
+        	android:layout_marginLeft="40dp"
+        	android:layout_marginTop="15dp"
+        	android:layout_marginRight="40dp"
+        	android:id="@+id/rechar_l2">
+            <ImageView android:src="@drawable/recharge_mark"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:id="@+id/rechar_mark_img"
+                android:layout_centerVertical="true"/>
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/rechar_mark_img"
+                android:id="@+id/rechar_commendinfo_l"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="25dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rechar_typen1"
+                    android:textColor="@color/color_f86031"
+                    android:textSize="28sp"
+                    android:text="@string/rechar_bank"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rechar_typen2"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/rechar_bank_recommed"
+                    android:textSize="28sp"/>
+            </RelativeLayout>
+            <ImageView android:src="@drawable/check_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/rechar_commendinfo_l"/>
+	        <LinearLayout android:orientation="horizontal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	           	android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/rechar_balance1"
+	                android:textColor="@color/color_f86031"
+	                android:layout_marginRight="10dp"
+	                android:layout_gravity="center_vertical"
+	                android:textSize="28sp"/>
+	            <EditText android:background="@drawable/recharge_input_img"
+	                android:layout_width="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/rechar_hint"
+	                android:textColor="@color/color_f86031"
+	                android:textColorHint="@color/color_f86031"
+	        		android:id="@+id/recharge_input_am"
+	        		android:inputType="number"
+	        		android:maxLength="6"
+	                android:paddingLeft="10dp"
+	                android:textSize="26sp"/>
+	        </LinearLayout>
+        </RelativeLayout>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rechar_l2"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_rechar_b_selector"
+            android:text="@string/instant_recharge"
+            android:textColor="@color/color_f86031"
+            android:textSize="26sp"
+            android:id="@+id/recharge_btn"/>
+    </RelativeLayout>
+
+</RelativeLayout>

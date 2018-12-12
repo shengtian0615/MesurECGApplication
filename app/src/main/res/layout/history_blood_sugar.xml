@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/history_blood_sugar_l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp" >
+
+        <RadioGroup
+            android:id="@+id/history_blood_sugar_timetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/history_time_sugar_day"
+                android:layout_width="@dimen/x130"
+                android:layout_height="@dimen/y80"
+                android:background="@drawable/time_type_l_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/day"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/history_time_sugar_week"
+                android:layout_width="@dimen/x130"
+                android:layout_height="@dimen/y80"
+                android:background="@drawable/time_type_m_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/week"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/history_time_sugar_month"
+                android:layout_width="@dimen/x130"
+                android:layout_height="@dimen/y80"
+                android:background="@drawable/time_type_r_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/month"
+                android:textSize="22sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/history_sugar_type"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/sugar_type"
+            android:drawableRight="@drawable/black_arrow_down"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingRight="@dimen/x10"
+            android:paddingLeft="@dimen/x20"
+            android:text="@string/front_breakfast"
+            android:textColor="@color/white_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y70"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/sugar_type"
+            android:id="@+id/history_sugar_month"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/x20"
+            android:paddingLeft="@dimen/x20"
+            android:visibility="gone"
+            android:textColor="@color/white_color"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/history_blood_sugar_l1">
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/history_sugar_chart_title"
+                android:textSize="25sp"
+                android:textColor="#B2B2B4"/>
+            <TextView android:drawableLeft="@drawable/sugar_legend"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textSize="20sp"
+                android:textColor="#B2B2B4"
+                android:text="@string/blood_sugar_mmol_L"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <com.wehealth.mesurecg.view.GraphicView
+            android:id="@+id/history_blood_sugar_scat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

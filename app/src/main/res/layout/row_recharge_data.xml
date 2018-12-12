@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dip">
+
+    <TextView android:textSize="18sp"
+        android:textColor="@color/text_light_gray" 
+        android:layout_marginTop="6dip"
+        android:id="@+id/recharge_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/recharge_date"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+		<TextView
+            android:enabled="false"
+            android:textSize="20sp"
+            android:textColor="@color/text_light_gray" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recharge_amount_tv"/>
+
+        <TextView
+            android:textSize="23sp"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:id="@+id/recharge_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+        	android:textColor="@color/text_light_gray"
+        	android:id="@+id/recharge_type_tv"/>
+        <TextView android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/text_white" 
+            android:id="@+id/recharge_type"
+            android:gravity="right"/>
+    </LinearLayout>
+
+</RelativeLayout>

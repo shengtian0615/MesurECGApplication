@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color" >
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ecglong_timeselect"
+            android:text="@string/position_scan"/>
+        <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ecglong_timecount"
+            android:layout_centerVertical="true"
+            android:inputType="number"
+            android:layout_toLeftOf="@id/ecglong_timeselect"/>
+    </RelativeLayout>
+    <ListView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:id="@+id/ecglong_timelv"
+        android:cacheColorHint="#00000000"/>
+
+</LinearLayout>

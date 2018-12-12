@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xtao="http://schemas.android.com/apk/res/com.wehealth.mesurecg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background"
+    android:background="@color/color_3F4555"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+    </RelativeLayout>
+    <com.wehealth.mesurecg.view.SwipyRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xtao:direction="bottom" >
+        <ListView
+            android:id="@+id/acc_detail_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="1px"
+            android:scrollbars="vertical"/>
+    </com.wehealth.mesurecg.view.SwipyRefreshLayout>
+    <TextView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="@color/text_white"
+		    android:layout_gravity="center"
+		    android:layout_marginTop="150dp"
+		    android:id="@+id/acc_detail_null"
+	        android:visibility="gone"
+		    android:textSize="30sp"
+		    android:text="没有获取到数据"/>
+
+</LinearLayout>

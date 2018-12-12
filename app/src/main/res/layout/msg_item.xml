@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" >
+    
+    <ImageView android:src="@drawable/tab_unread_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/msg_item_state"/>
+    <Button android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg_item_delete"
+        android:focusable="false"
+        android:padding="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/text_white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/delete_img"/>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_toRightOf="@id/msg_item_state"
+        android:layout_toLeftOf="@id/msg_item_delete"
+        android:layout_height="wrap_content">
+	    <RelativeLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/msg_item_idcode"
+	            android:textSize="18sp"
+	            android:textColor="@color/text_white"/>
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/msg_item_time"
+	            android:textColor="@color/text_white"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="20dp"/>
+	    </RelativeLayout>
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:lines="1"
+            android:textColor="@color/text_white"
+            android:id="@+id/msg_item_result"
+            android:ellipsize="end"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

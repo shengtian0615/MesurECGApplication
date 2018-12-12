@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/sinodevice_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingLeft="5dp"
+        android:text="可配对的设备"
+        android:textColor="@color/color_333333"
+        android:textSize="23sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/sinodevice_v1"
+        android:layout_below="@id/sinodevice_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/sinodevice_scan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="扫描设备"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/text_orange"
+        android:textSize="21sp" />
+    <ListView
+        android:id="@+id/sinodevice_listview"
+        android:layout_below="@id/sinodevice_v1"
+        android:layout_above="@id/sinodevice_scan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

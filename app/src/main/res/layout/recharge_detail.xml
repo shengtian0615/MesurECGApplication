@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_3F4555"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_textsize_28sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+        <TextView
+            android:id="@+id/ecg_user"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_right_textsize_22sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x100"
+            android:layout_marginRight="@dimen/x100" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:text="充值金额："
+                    android:textColor="@color/color_FE6232"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/rech_da_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/rech_da_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/money_nomal"
+                            android:text="10元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/rech_da_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/money_nomal"
+                            android:text="30元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/rech_da_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/money_nomal"
+                            android:text="50元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/rech_da_100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/money_nomal"
+                            android:text="100元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/rech_da_200"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/money_nomal"
+                            android:text="200元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/rech_da_500"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/money_nomal"
+                            android:text="500元"
+                            android:textColor="@color/button_text_yellow_blue"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/rech_d_myinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x180"
+                android:layout_marginTop="15dp"
+                android:hint="请输入充值金额"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxWidth="180dp"
+                android:textColor="@color/page_title_bar_color"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:text="支付金额："
+                    android:textColor="@color/color_FE6232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/rech_d_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="900元"
+                    android:textColor="@color/color_FE6232"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式："
+                    android:textColor="@color/color_FE6232"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rech_d_paytype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rech_d_unionpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/check_bg"
+                        android:checked="true"
+                        android:text="银行卡"
+                        android:textColor="@color/color_FE6232"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rech_d_wxpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/check_bg"
+                        android:text="微信"
+                        android:textColor="@color/color_FE6232"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rech_d_alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/check_bg"
+                        android:text="支付宝"
+                        android:textColor="@color/color_FE6232"
+                        android:textSize="16sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x200"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp" >
+
+                    <TextView
+                        android:id="@+id/rech_d_recharge_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="充值记录"
+                        android:textColor="@color/menu_btn_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/rech_d_pay_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:padding="5dp"
+                        android:text="付费明细"
+                        android:textColor="@color/menu_btn_text"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/rech_d_pay"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="立即充值"
+                    android:textColor="@color/color_FE6232"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

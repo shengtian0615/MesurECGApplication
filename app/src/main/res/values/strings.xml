@@ -1,0 +1,433 @@
+<resources>
+    <string name="app_name">测心电2</string>
+    <string name="position_scan">查看</string>
+    <string name="message">消息</string>
+    <string name="message_detail">详情</string>
+    <string name="recharge">充值</string>
+    <string name="input_amount_money">请输入金额</string>
+    <string name="instant_recharge">立即充值</string>
+    <string name="rechar_balance">账户余额</string>
+    <string name="rechar_typen">选择支付方式</string>
+    <string name="rechar_balance1">充值金额</string>
+    <string name="rechar_hint">0元</string>
+    <string name="rechar_bank">银行卡支付</string>
+    <string name="rechar_bank_recommed">推荐持卡人使用</string>
+    <string name="receive_the_passthrough">收到透传：action：</string>
+
+    <string name="print_btlist">蓝牙设备列表</string>
+
+    <string name="net_failed">网络不可用</string>
+    <string name="select_user">请选择用户</string>
+    <string name="re_login">请重新登录</string>
+    <string name="friend_notify">友情提示</string>
+    <string name="prompt">提示：</string>
+    <string name="doctor_report">医生报告单</string>
+
+    <string name="register_info1">我同意</string>
+    <string name="register_info2">服务条款</string>
+    <string name="register_info3">中所有内容</string>
+    <string name="reportecg_info2">《专家读图服务协议》</string>
+    <string name="title_register">注册</string>
+    <string name="register_bind">已有注册者账号</string>
+    <string name="title_service">服务协议</string>
+    <string name="register_sign_up">注    册</string>
+    <string name="sure_password">确认密码</string>
+    <string name="password">密码</string>
+    <string name="register_idcardno">身份证号</string>
+    <string name="real_name">真实姓名</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="verify_unique">验证唯一</string>
+    <string name="input_verify_code">请输入验证码</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="input_phone_num">手机号码</string>
+    <string name="sign_in_empty">登      录</string>
+    <string name="mmhg">mmHg</string>
+    <string name="mmoll">mmol/L</string>
+
+    <string name="sign_up">注册</string>
+    <string name="sign_in">登录</string>
+    <string name="sign_up_success">注册成功</string>
+    <string name="sign_up_signin">注册失败: 此身份证号已注册过\n是否用此身份证登录？</string>
+    <string name="sign_up_idcard_error">注册失败: 身份证号有误！</string>
+    <string name="sign_up_agreement">注册时必须同意服务协议</string>
+    <string name="sign_up_psd_prompt">密码为身份证号后六位，可登录找心电专家修改密码</string>
+    <string name="sign_up_serialno">请输入设备序列号(区分大小写)</string>
+    <string name="sign_up_ing">正在注册</string>
+    <string name="sign_up_phone_exist">您填写的手机号码已被使用，请更换一个手机号</string>
+
+    <string name="net_failed_unload_info">网络不可用, 不能获取资料</string>
+    <string name="net_timeout_prompt">网络不好，连不上服务器\n您是否要关闭网络进行离线测量？</string>
+    <string name="downloading_info">正在获取相关资料</string>
+
+    <string name="user_info_is_imperfect">用户信息不完整，请完善信息</string>
+    <string name="no_install_plugn">没有安装测心电插件！</string>
+    <string name="failed_to_re">测量失败，请重新测量</string>
+    <string name="long_time_test_over">心电测量完毕</string>
+    <string name="long_time_test_prompt">您正在进行长时间心电测量，可以在设置里更改测量模式</string>
+    <string name="no_save_data_please_retest">没有收到保存的数据，请重新开始测量</string>
+    <string name="no_prompt">不再提示</string>
+    <string name="version_update_prompt">版本更新提示</string>
+    <string name="update_immediate">立即更新</string>
+    <string name="download_latest_version">正在下载最新的版本</string>
+    <string name="sdcard_no_avaiable">SD卡不可用，请插入SD卡</string>
+    <string name="download_prompt">下载过程中，为了尽快下载完成，请不要操作手机</string>
+    <string name="store_space_prompt">存储空间提示</string>
+    <string name="store_prompt">存储空间严重不足，请清理一下存储空间再进行测试</string>
+    <string name="append">添  加</string>
+
+    <string name="connect_conflict">同一帐号已在其他设备登录</string>
+
+    <string name="title_ecg_report">心电报告</string>
+    <string name="ecg_report_btn_send_report">上传报告看医生(￥1元)</string>
+    <string name="ecg_report_btn_doctor_recheck">专家快速复核(￥20元)</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="over">结束</string>
+    <string name="exit">退出</string>
+    <string name="check_in_12H">专家解读</string>
+    <string name="check_in_12H2">复核</string>
+    <string name="title_ecg_measure_prepare">准备测心电</string>
+    <string name="next_step">下一步 </string>
+    <string name="title_personal_infomation">个人信息</string>
+    <string name="title_add_personal">添加用户信息</string>
+    <string name="title_bloodpress">记录血压</string>
+    <string name="title_bloodsugar">记录血糖</string>
+    <string name="edit_text">编辑</string>
+    <string name="save">保存</string>
+    <string name="add">创建</string>
+    <string name="bind">绑定</string>
+    <string name="bind_failed">绑定失败</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="add_success">创建成功!</string>
+    <string name="add_failed">创建失败!</string>
+    <string name="update_failed">更新失败</string>
+    <string name="use_urgent_bonus">使用紧急复核券</string>
+    <string name="use_regular_bonus">使用常规复核券</string>
+    <string name="use_ecgcheck_bonus">使用复核券</string>
+    <string name="use_conpon_bonus">使用代金券</string>
+
+    <string name="measure_bp">测量血压</string>
+    <string name="measure_bp_right_pose">正确的测量姿势</string>
+    <string name="measure_bp_right_pose1">双脚自然放平于地面</string>
+    <string name="measure_bp_right_pose2">手臂外露测量数据更准确</string>
+    <string name="measure_bp_right_pose3">袖带中心与心脏保持在同一水平线</string>
+    <string name="measure_bp_right_pose4">身体自然垂直，不要斜靠在椅子上测量</string>
+    <string name="scanning">扫描未知设备...</string>
+    <string name="select_device">选择一个设备连接</string>
+    <string name="none_paired">没有已配对设备</string>
+    <string name="none_found">没有建立连接</string>
+    <string name="bp_high_default">120</string>
+    <string name="bp_low_default">80</string>
+    <string name="bp_heart_default">68</string>
+    <string name="bp_input_hint">点击录入</string>
+    <string name="bp_close_prompt">蓝牙连接已断开，请查看蓝牙血压计是否打开！</string>
+    <string name="bs_close_prompt">蓝牙连接已断开，请查看蓝牙血糖仪是否打开！</string>
+
+    <string name="name_isempty">用户的姓名不能为空！</string>
+    <string name="name_is_en_zh">姓名应该是汉字或者英文字母</string>
+    <string name="idcard_empty">身份证号码不能为空</string>
+    <string name="idcard_error">身份证号有误</string>
+    <string name="serialno_error">设备序列号不能为空</string>
+    <string name="phone_number_is_empty">用户手机号码为空</string>
+    <string name="phone_num_error">用户手机号码有误</string>
+    <string name="emergency_empty">紧急联系人姓名为空</string>
+    <string name="emergency_empty_cn_en">紧急联系人姓名应该为中文或字母</string>
+    <string name="emergency_contant_empty">紧急联系人关系为空</string>
+    <string name="emergency_contant_empty_cn_en">紧急联系人关系应为中文或字母</string>
+    <string name="emergency_phone_error">紧急联系人手机号码有误</string>
+    <string name="emergency_phone_is_empty">紧急联系人手机号码为空</string>
+    <string name="heigh_error">输入的身高有误！</string>
+    <string name="weight_error">输入的体重有误！</string>
+    <string name="update_user_info">正在更新用户信息</string>
+    <string name="register_phone_is_empty">手机号码为空</string>
+    <string name="register_phone_error">手机号码有误</string>
+
+    <string name="user_idcard">用户身份证号：</string>
+    <string name="name">姓名：</string>
+    <string name="gender">性别：</string>
+    <string name="birthday">出生日期：</string>
+    <string name="user_phone">手机号码：</string>
+    <string name="sex_femal">女</string>
+    <string name="sex_male">男</string>
+    <string name="id_card">身份证号：</string>
+    <string name="contact_person">紧急联系人：</string>
+    <string name="contact_person_phone">紧急联系人电话：</string>
+    <string name="contant2me">与本人关系：</string>
+    <string name="height">身高cm：</string>
+    <string name="weight">体重kg：</string>
+    <string name="blood_type">血型：</string>
+    <string name="medical_record">病史：</string>
+    <string name="hypertension">高血压</string>
+    <string name="diabetes">糖尿病</string>
+    <string name="myocardial_infarction">心肌梗塞</string>
+    <string name="installing_pacemaker">安装起搏器</string>
+    <string name="done_support">做过支架</string>
+    <string name="bypass_surgery">做过搭桥手术</string>
+
+    <string name="account_balance">账户余额：</string>
+    <string name="imei_num">编号： </string>
+    <string name="add_person_idcard_hint">请输入18位身份证号</string>
+
+    <string name="ecg_state_title">为便于医生提出建议, 您目前有何不适, 请在下表中勾选(可多选)</string>
+    <string name="ecg_state_xiongmen">胸闷</string>
+    <string name="ecg_state_xiongtong">胸痛</string>
+    <string name="ecg_state_xinhuang">心慌</string>
+    <string name="ecg_state_qiduan">气短</string>
+    <string name="ecg_state_hunjue">昏厥</string>
+    <string name="ecg_state_beibufangshetong">背部放射痛</string>
+    <string name="ecg_state_futong">腹痛</string>
+    <string name="ecg_state_yatong">牙痛</string>
+    <string name="ecg_state_zhitishuizhong">肢体水肿</string>
+    <string name="ecg_state_other">其他心前区不适</string>
+    <string name="selected_ok">已选好，发送心电图</string>
+
+    <string name="title_device_infomation_set">设置</string>
+    <string name="person_infomation_change">个人信息修改</string>
+    <string name="set_style_update">主题风格更改</string>
+    <string name="set_ecgsenior_style">测心电高级模式</string>
+    <string name="set_ecg_style">心电测量模式</string>
+    <string name="set_play_video">测量前视频播放</string>
+    <string name="set_test_time">测量时间选择</string>
+    <string name="iccid">sim卡序列号</string>
+    <string name="imei">序列号</string>
+    <string name="app_update_set">版本信息</string>
+    <string name="help_info">帮助信息</string>
+    <string name="style_ecg_auto">自动</string>
+    <string name="style_ecg_senior">高级</string>
+    <string name="style_ecg_1min">1分钟</string>
+    <string name="style_ecg_24h">24小时</string>
+    <string name="style_yellow">暖色风格</string>
+    <string name="style_bule">深色风格</string>
+    <string name="test_long">长时间</string>
+    <string name="test_short">短时间</string>
+    <string name="open">开</string>
+    <string name="close">关</string>
+    <string name="play_video_on">播放视频</string>
+    <string name="play_video_off">取消播放</string>
+    <string name="current_version">当前版本: </string>
+    <string name="current_no_user">当前没有用户！</string>
+
+    <string name="title_doctor_rechect_report">复核报告</string>
+    <string name="doctor_recheck_result">医生结论：</string>
+    <string name="doctor_recheck_advice">医生建议：</string>
+    <string name="doctor_recheck_waiting_text">请稍等，我们的专家将在五分钟内为您复核完心电报告！</string>
+    <string name="mesure_ecg">测心电</string>
+    <string name="my_ecg_report">我的心电档案</string>
+    <string name="main_page_balance">&lt;font size=\"28\" color=\"red\">%1$s&lt;/font>￥</string>
+    <string name="filter_wave">过滤杂波</string>
+    <string name="title_ecg_measure">心电测量中</string>
+    <string name="ecg_history_report">心电档案</string>
+    <string name="ecg_long_history_report">长时间心电档案</string>
+    <string name="health_file">健康档案</string>
+    <string name="delete">删除</string>
+    <string name="uploaded">已上传</string>
+    <string name="upload">上传</string>
+    <string name="bpm">次/分钟</string>
+    <string name="default__">--</string>
+    <string name="result_please_sure">分析结果请医生确认</string>
+    <string name="regular_check">首选医生复核(￥</string>
+    <string name="check_back">元</string>
+    <string name="wait_doctor_msg_reply">￥</string>
+    <string name="emergent_check">专家紧急复核(￥</string>
+    <string name="emergent_minute_reply">7分钟内专家回复</string>
+    <string name="ask_doctor">咨询医生(￥</string>
+    <string name="risk_info1">风险告知：</string>
+    <string name="risk_info2">分析结果仅供参考，如有疑问请做更全面的检查或咨询医生意见</string>
+    <string name="prompt_note">重要提示：</string>
+    <string name="worker_time_risk_info">\t医生将在12小时内答复您的心电图咨询要求\n\n\t如果您在此期间，有任何不适请携带存有心电图的平板电脑及时就医。</string>
+    <string name="worker_time1">服务时间：</string>
+    <string name="worker_time2">工作日早8：00~晚6：00，15分钟内回复结果。</string>
+    <string name="worker_time3">当日心电图十五分钟内提供复核</string>
+
+    <string name="upload_successed">上传成功！</string>
+    <string name="upload_failed">上传失败！</string>
+    <string name="measuring">正在测量</string>
+    <string name="change_bp">更换血压计</string>
+    <string name="set_change_bp_prompt">更换血压计成功，您是否添加其他血压计？</string>
+
+    <string name="heart_rate">心率</string>
+    <string name="sure_delete">您确定删除吗？</string>
+    <string name="test_time">测量时间</string>
+    <string name="high_press">收缩压</string>
+    <string name="low_press">舒张压</string>
+    <string name="breakfast">早餐</string>
+    <string name="front">前</string>
+    <string name="back">后</string>
+    <string name="blood_sugar_mmol_L"> 血糖浓度 mmol/L</string>
+    <string name="blood_sugar">血糖浓度</string>
+    <string name="blood_record">记录血糖</string>
+    <string name="blood_measure">测量血糖</string>
+    <string name="blood_sugar_select">血糖选择值(mmol/L)</string>
+    <string name="h24_blood_sugar_monitor">24小时血糖数据监测</string>
+    <string name="day">日</string>
+    <string name="week">周</string>
+    <string name="month">月</string>
+    <string name="front_breakfast">早餐前</string>
+    <string name="current_data">获取当前测量结果</string>
+    <string name="devcie_pair">可配对的设备</string>
+    <string name="search_device">搜索设备</string>
+
+    <string name="front_page">前页</string>
+    <string name="back_page">后页</string>
+
+    <string name="wait_time">等待时间</string>
+
+    <string name="skip">跳过</string>
+    <string name="not_play_video">不再播放</string>
+
+    <string name="sign_in_device">登录设备</string>
+    <string name="sign_in_success">登录成功</string>
+    <string name="sign_in_fail_no_info">没有获取到数据，登录失败，请检查网络</string>
+    <string name="sign_in_fail">登录失败</string>
+    <string name="no_sign_up_sign_in_fail">您还没有注册，登录失败</string>
+    <string name="idcardno_password_error">身份证号或密码错误</string>
+    <string name="sign_in_fail_no_get_info">登录时获取数据失败，请检查网络</string>
+    <string name="you_are_binded">您的账号已绑定，请先解绑再登录</string>
+    <string name="network_signal_not_good">网络信号不好，请改善网络再登录</string>
+    <string name="password_not_empty">密码不能为空</string>
+    <string name="sign_in_notice">正在登录，请稍候</string>
+    <string name="network_is_not_available">网络不可用，请检查网络</string>
+
+    <string name="analysis_result">分析结果</string>
+    <string name="fhp">FHP:</string>
+    <string name="flp">FLP:</string>
+    <string name="hr">HR:</string>
+    <string name="pr">PR:</string>
+    <string name="qrs">QRS:</string>
+    <string name="qt_qtc">QT/QTc:</string>
+    <string name="qtc">QTC:</string>
+    <string name="p_qrs_t">P/QRS/T:</string>
+    <string name="qrsaxis">QRSAxis:</string>
+    <string name="taxis">TAxis:</string>
+    <string name="rv5">RV5:</string>
+    <string name="sv1">SV1:</string>
+    <string name="rv5sv1">RV5/SV1:</string>
+    <string name="rv5_sv1">RV5+SV1:</string>
+    <string name="auto_analysis_result">自动分析结论</string>
+    <string name="longtime_test">长时间测量</string>
+    <string name="page">页</string>
+    <string name="loading_data">正在加载数据</string>
+
+    <string-array name="blood_type">
+        <item >未知</item>
+        <item >A</item>
+        <item >B</item>
+        <item >AB</item>
+        <item >O</item>
+    </string-array>
+    <string-array name="blood_sugar_type">
+        <item >早餐</item>
+        <item >午餐</item>
+        <item >晚餐</item>
+        <item >睡前</item>
+        <item >自定义</item>
+    </string-array>
+    <string-array name="ecg_profile">
+        <item >心电档案</item>
+        <item >血压档案</item>
+        <item >血糖档案</item>
+        <item >长时间心电</item>
+    </string-array>
+
+    <string name="scan">扫描</string>
+    <string name="str_checkdevice">检查设备</string>
+    <string name="str_open">打开蓝牙</string>
+    <string name="str_close">关闭蓝牙</string>
+    <string name="str_matched">查看配对设备</string>
+    <string name="str_openimg">打开图片</string>
+    <string name="str_create2d">创建二维码</string>
+    <string name="str_createbar">创建条码</string>
+    <string name="str_order">字体大小</string>
+    <string name="str_scan">扫描设备</string>
+    <string name="str_printword">打印</string>
+    <string name="str_printword_desc">打印GBK，Unicode编码文字</string>
+    <string name="str_printimg">打印图片</string>
+    <string name="str_createimg">生成图片</string>
+    <string name="str_printimg_desc">选择本机图片打印</string>
+    <string name="str_printbarcode">一维码打印</string>
+    <string name="str_printbarcode_desc">动态创建一维码打印</string>
+    <string name="str_printqrcode">二维码打印</string>
+    <string name="str_printqrcode_desc">动态创建二维码打印</string>
+    <string name="str_printcmd">发送打印机指令</string>
+    <string name="str_printcmd_desc">发送打印指令集中其他指令</string>
+    <string name="str_disconnect">断开连接</string>
+    <string name="str_device">设备</string>
+    <string name="str_scaning">正在扫描</string>
+    <string name="str_unconnected">未连接!</string>
+    <string name="str_succonnect">连接成功!</string>
+    <string name="str_faileconnect">连接失败!</string>
+    <string name="str_lose">丢失连接!</string>
+    <string name="str_cannotcreate2d">创建二维码失败! </string>
+    <string name="str_cannotcreatebar">未能创建一维码</string>
+    <string name="str_devecehasblue">有蓝牙设备!</string>
+    <string name="str_nomatched">没有匹配设备!</string>
+    <string name="str_connected">已连接</string>
+    <string name="str_disconnected">没有连接</string>
+    <string name="str_connecting">正在连接</string>
+    <string name="str_hasnodevice">没有蓝牙设备!</string>
+    <string name="str_scanover">扫描完毕</string>
+    <string name="chose">请选择</string>
+    <string name="mode_bt">蓝牙打印机</string>
+    <string name="mode_wifi">Wifi打印机</string>
+    <string name="mode_usb">USB打印机</string>
+    <string name="str_printunicode">打印 Unicode</string>
+    <string name="str_printtext">打印文字</string>
+    <string name="str_exit">确定退出并关闭设备吗？</string>
+    <string name="str_autotime">间隔时间(ms):</string>
+    <string name="str_autoprint">自动打印</string>
+
+
+
+    <string name="str_printer_state">状态</string>
+    <string name="str_printer_printing">正在打印</string>
+    <string name="str_printer_lowpower">低电压</string>
+    <string name="str_printer_nopaper">缺纸</string>
+    <string name="str_printer_bufferfull">缓冲区满</string>
+    <string name="str_printer_buffernull">缓冲区空</string>
+    <string name="str_printer_hightemperature">温度过高</string>
+
+
+    <string name="str_custom_instruction">指令</string>
+    <string name="button_send_instruction">发送</string>
+
+    <string name="print_setting">打印设置</string>
+    <string name="code_transformation">黑标设置</string>
+
+    <string name="black_mark_open">打开</string>
+    <string name="black_mark_close">关闭</string>
+    <string name="black_mark_height">黑标长度</string>
+    <string name="black_mark_width">黑标宽度</string>
+    <string name="black_mark_start_bit">起始位置</string>
+    <string name="black_mark_to_update">一键更新</string>
+    <string name="black_mark_to_plz_open">请先打开黑标!</string>
+    <string name="black_mark_voltage">黑标电压</string>
+    <string name="black_mark_to_bmark">走纸到黑标</string>
+    <string name="black_mark_to_test">打印测试</string>
+    <string name="black_mark_to_text">文本</string>
+    <string name="black_mark_to_bar">条形码</string>
+    <string name="black_mark_to_qr">二维码</string>
+
+    <string name="sys">收缩压：</string>
+    <string name="dia">舒张压：</string>
+    <string name="pul">脉搏：</string>
+    <string name="gain">增益:</string>
+    <string name="speed">纸速:</string>
+    <string name="st_tv_baselinefilter">基线滤波:</string>
+    <string name="st_tv_emgfilter">肌电滤波:</string>
+    <string name="st_tv_acfilter">工频滤波:</string>
+    <string name="st_tv_lpfilter">低通滤波:</string>
+    <string name="filter_param">滤波参数设置</string>
+    <string name="filter_50">50Hz</string>
+    <string name="filter_60">60Hz</string>
+    <string name="filter_40">40Hz</string>
+    <string name="filter_75">75Hz</string>
+    <string name="filter_100">100Hz</string>
+    <string name="filter_150">150Hz</string>
+    <string name="filter_off">OFF</string>
+    <string name="filter_25">25Hz</string>
+    <string name="filter_35">35Hz</string>
+    <string name="filter_45">45Hz</string>
+    <string name="filter_005">0.05Hz</string>
+    <string name="filter_025">0.25Hz</string>
+    <string name="filter_050">0.50Hz</string>
+</resources>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+        
+        <TextView 
+            android:layout_width="120dp"
+            android:layout_height="fill_parent"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/textview_ecg_upload"
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/bottom_text_color_normal"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/backlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/btn_menu_normal"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/y5" >
+
+        <LinearLayout
+            android:id="@+id/listview_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/measure_chart_l2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/y5"
+            android:layout_weight="3" >
+            
+            <LinearLayout android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/measure_chart_l1"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户测量时的症状"
+                    android:textColor="#ff00ff00"
+		            android:textSize="18sp" />
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y2"
+                    android:id="@+id/measure_symptoms_content"
+                    android:text="胸闷"
+                    android:textColor="#ff00ff00"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/gray_pressed"
+                android:background="@drawable/sugar_type"
+                android:id="@+id/textview_print"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="20sp"
+                android:text="打印"/>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/measure_chart_l1"
+                android:layout_marginTop="@dimen/y5" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    
+                    <TextView
+		                android:id="@+id/measure_chart_text1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerHorizontal="true"
+		                android:text="@string/analysis_result"
+		                android:textColor="#ff00ff00"
+		                android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:layout_below="@id/measure_chart_text1"
+                        android:id="@+id/relativelayout_chart_hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/hr"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_HR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_l3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_hr"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/pr"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_PRInterval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_l4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_l3"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/qrs"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_QRSDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_lqtd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_l4"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/qt_qtc"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_qtd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_lqtc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_lqtd"
+                        android:layout_marginRight="@dimen/x5"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/qtc"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_qtc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_lPAxis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_lqtc"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/p_qrs_t"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_PAxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_lQRSAxis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_lPAxis"
+                        android:layout_marginRight="@dimen/x5"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/qrsaxis"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_QRSAxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_lTAxis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_lQRSAxis"
+                        android:layout_marginRight="@dimen/x5"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/taxis"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_TAxis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_l6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_lTAxis"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/rv5sv1"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_rv5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativelayout_chart_rv5_sv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_l6"
+                        android:layout_marginRight="@dimen/x5" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/rv5_sv1"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_rv5_sv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_rv5_sv1"
+                        android:layout_marginRight="@dimen/x5"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/rv5sv1"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_rv5sv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ff00ff00"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relativelayout_chart_rv5_sv1"
+                        android:layout_marginRight="@dimen/x5"
+                        android:layout_marginTop="@dimen/y10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/auto_analysis_result"
+                            android:textColor="#ff00ff00"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textview_heart_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ff00ff00"
+                            android:textSize="16sp" />
+                        
+                        <TextView
+                            android:id="@+id/textview_heart_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ff00ff00"
+                            android:layout_marginTop="@dimen/y5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/common_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            style="@style/Widget.ProgressBar.ListViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="150dp" />
+    </LinearLayout>
+
+</RelativeLayout>

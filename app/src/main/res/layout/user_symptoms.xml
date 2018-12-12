@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@+id/current_filter_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/ecg_xiongmen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/ecg_state_xiongmen" />
+        <CheckBox
+            android:id="@+id/ecg_xiongtong"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_xiongtong" />
+        <CheckBox
+            android:id="@+id/ecg_xinhuang"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_xinhuang" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/ecg_qiduan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/ecg_state_qiduan" />
+        <CheckBox
+            android:id="@+id/ecg_hunjue"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_hunjue" />
+        <CheckBox
+            android:id="@+id/ecg_bbfst"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_beibufangshetong" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/ecg_futong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/ecg_state_futong" />
+        <CheckBox
+            android:id="@+id/ecg_yatong"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_yatong" />
+        <CheckBox
+            android:id="@+id/ecg_zhitishuizhong"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_zhitishuizhong" />
+    </LinearLayout>
+    <CheckBox
+            android:id="@+id/ecg_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ecg_state_other" />
+</LinearLayout>

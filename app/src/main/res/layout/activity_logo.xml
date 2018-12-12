@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background"
+    android:background="@color/page_background_color" >
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="390dip"
+        android:layout_height="150dip"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="true"
+        android:src="@drawable/welcome_blue_logo" />
+
+</RelativeLayout>

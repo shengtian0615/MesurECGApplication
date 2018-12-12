@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_textsize_28sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+        <TextView
+            android:id="@+id/ecg_user"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:visibility="invisible"
+            android:textSize="@dimen/title_right_textsize_22sp"
+            android:textColor="@color/bottom_text_color_normal"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+    <!-- 
+    <ListView
+            android:id="@+id/listview_ecg_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:divider="#333949"
+            android:dividerHeight="1dp" />
+     -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp" >
+
+        <ListView
+            android:background="@color/page_title_bar_color"
+            android:id="@+id/listview_ecg_history"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:divider="#FFFFFF"
+            android:dividerHeight="2dp" />
+
+        <FrameLayout
+            android:id="@+id/history_framelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

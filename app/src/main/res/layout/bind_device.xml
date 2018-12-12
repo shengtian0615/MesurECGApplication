@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/ecg_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sign_in_device"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_textsize_28sp" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+            
+        <RelativeLayout
+        	android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" >
+			<EditText
+            	android:id="@+id/bind_device_idcardno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="@string/register_idcardno"
+                android:singleLine="true"
+                android:maxLength="18"
+                android:textSize="18sp" />
+
+			<View
+            	android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+            
+		<RelativeLayout
+        	android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+            	android:id="@+id/bind_device_psd"
+            	android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:maxLength="15"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+			<View
+            	android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#b3b3b3" />
+		</RelativeLayout>
+        <LinearLayout
+        	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal" >
+
+            <Button
+            	android:id="@+id/bind_device_logbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="30dp"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="@string/sign_in_empty"
+                android:background="@drawable/btn_send_report_press"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+		</LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

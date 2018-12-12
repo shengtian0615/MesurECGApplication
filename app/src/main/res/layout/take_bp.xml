@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background_color" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/measure_bp"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_textsize_28sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="120dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="3dip"
+            android:text="@string/upload"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/title_right_textsize_22sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/take_bp_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y400"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x20"
+        android:background="@drawable/measure_presure_num_bg1"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/take_bp_progress"
+            style="@style/progressBar"
+            android:layout_width="@dimen/x20"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_marginBottom="@dimen/y20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/take_bp_center"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_margin="@dimen/x50"
+        android:layout_toLeftOf="@id/take_bp_right" >
+
+        <ImageView
+            android:id="@+id/take_bp_bgimg"
+            android:layout_width="@dimen/x400"
+            android:layout_height="@dimen/y400"
+            android:layout_centerInParent="true"
+            android:src="@drawable/take_bp_imgbg" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/title_layout"
+        android:layout_marginLeft="@dimen/x20"
+		android:scrollbars="vertical"
+		android:fadeScrollbars="false"
+		android:id="@+id/take_bp_scrollview"
+        android:layout_toLeftOf="@id/take_bp_center" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/take_bp_l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/take_bp_record"
+                    android:layout_width="@dimen/x200"
+                    android:layout_height="@dimen/y60"
+                    android:background="@drawable/bp_record_img" />
+
+                <Button
+                    android:id="@+id/take_bp_measure"
+                    android:layout_height="@dimen/y60"
+                    android:layout_width="@dimen/x200"
+                    android:layout_marginLeft="@dimen/x60"
+                    android:background="@drawable/bp_measure_img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/take_bp_l2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/take_bp_l1"
+                android:layout_marginTop="@dimen/y10"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/take_bp_testime_tv"
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_time"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/take_bp_testime"
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="@dimen/y45"
+                    android:background="@drawable/blood_bs_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/take_bp_l3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/take_bp_l2"
+                android:layout_marginTop="@dimen/y10"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/take_bp_high_tv"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="wrap_content"
+                        android:text="@string/high_press"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/take_bp_high"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="@dimen/y45"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/blood_bs_bg"
+                        android:gravity="center"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/take_bp_low_tv"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_press"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/take_bp_low"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="@dimen/y45"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/blood_bs_bg"
+                        android:gravity="center"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/take_bp_heart_tv"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/take_bp_heart"
+                        android:layout_width="@dimen/x180"
+                        android:layout_height="@dimen/y45"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/blood_bs_bg"
+                        android:gravity="center"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/bpm"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/take_bp_numlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/take_bp_l3"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y10"
+                android:gravity="center_horizontal"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/take_bp_wheeltitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp" />
+
+                <com.wehealth.mesurecg.view.wheel.WheelView
+                    android:id="@+id/wheelView_num"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/take_bp_wheeltitle" />
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wheelView_num"
+                    android:background="@color/text_white"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/take_bp_numok"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/red_btn_bg"
+                        android:text="@string/ok"
+                        android:textColor="@color/white_color"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/take_bp_numcancel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/red_btn_bg"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

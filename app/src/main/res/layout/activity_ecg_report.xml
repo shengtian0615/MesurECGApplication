@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/ecg_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_ecg_report"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="@dimen/title_textsize_28sp" />
+
+        <Button
+            android:id="@+id/report_ecg_upload"
+            android:layout_width="120dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="@string/upload"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/title_right_textsize_22sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/report_l2"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+    		android:paddingLeft="@dimen/x10"
+    		android:paddingRight="@dimen/x10"
+            android:layout_height="match_parent" >
+            
+			<RelativeLayout android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_marginTop="@dimen/y20"
+    			android:id="@+id/report_l21">
+    			<RelativeLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="@dimen/y140"
+	                android:layout_gravity="center_vertical"
+	                android:paddingLeft="@dimen/x20"
+	                android:paddingRight="@dimen/x20"
+                	android:layout_marginLeft="@dimen/x20"
+	                android:id="@+id/report_l10"
+	                android:background="@drawable/report_hr_bg" >
+
+	                <TextView
+	                    android:id="@+id/report_heartbeat_number"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerHorizontal="true"
+	                    android:layout_centerInParent="true"
+	                    android:text="80"
+	                    android:textColor="@color/color_00FF00"
+	                    android:textSize="30sp" />
+
+	                <TextView
+	                    android:id="@+id/TextView01"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerHorizontal="true"
+	                    android:layout_alignParentBottom="true"
+	                    android:text="@string/bpm"
+	                    android:textColor="@color/text_white"
+	                    android:textSize="14sp" />
+	            </RelativeLayout>
+	            <Button
+                    android:id="@+id/report_ecg_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_end_selector"
+                    android:layout_alignBottom="@id/report_l10"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginRight="@dimen/x30"
+                    android:text="@string/over"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/title_right_textsize_22sp" />
+			</RelativeLayout>
+			
+			<TextView
+			    android:layout_below="@id/report_l21"
+                android:id="@+id/report_collectionTime_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_marginLeft="@dimen/x20"
+                android:textColor="@color/text_white" />
+			<TextView
+			    android:layout_below="@id/report_collectionTime_normal"
+                android:id="@+id/report_diag_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_marginTop="@dimen/y30"
+                android:layout_marginLeft="@dimen/x20"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/title_right_textsize_22sp" />
+			
+			<RelativeLayout android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:id="@+id/report_l22"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_alignParentBottom="true">
+			    <TextView
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:id="@+id/report_ecg_adviceimg"
+                    android:background="@drawable/ecg_advice_img" />
+                <TextView
+                	android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="@string/prompt"
+                    android:id="@+id/report_ecg_advice_prompt"
+                    android:layout_toRightOf="@id/report_ecg_adviceimg"
+                    android:textColor="@color/text_white" />
+
+				<TextView
+                	android:id="@+id/report_wehealth_advice"
+                	android:layout_toRightOf="@id/report_ecg_advice_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   	android:layout_marginLeft="@dimen/x20"
+                    android:text="心电图提示严重异常，建议紧急联系医疗机构救治"
+                    android:textColor="@color/text_white"
+                    android:textStyle="bold" />
+			</RelativeLayout>
+			<TextView
+			    android:id="@+id/report_diag_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/report_l22"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginBottom="@dimen/y10"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/title_right_textsize_22sp" />
+        </RelativeLayout>
+
+        <ScrollView android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:id="@+id/report_scrollview">
+        	<RelativeLayout
+	            android:layout_width="fill_parent"
+	            android:orientation="vertical"
+	            android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/report_check_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y200"
+                    android:layout_marginTop="@dimen/y60"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/x40"
+                    android:paddingRight="@dimen/x40" >
+
+                    <TextView
+                    	android:id="@+id/report_free_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/check_in_12H"
+                        android:textColor="@color/text_lint_gray"
+                        android:textSize="@dimen/title_textsize_28sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/y10" >
+                        <TextView
+	                        android:id="@+id/report_free_tv2"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/wait_doctor_msg_reply"
+	                        android:textColor="@color/text_lint_gray"
+	                        android:textSize="@dimen/title_right_textsize_22sp" />
+                        <TextView
+                            android:id="@+id/report_free_nomalfee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:textColor="@color/text_red"
+                            android:textSize="@dimen/title_right_textsize_22sp" />
+
+                        <TextView
+                            android:id="@+id/report_free_tv13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/check_back"
+                            android:textColor="@color/text_lint_gray"
+                            android:textSize="@dimen/title_right_textsize_22sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y120"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/y10"
+                    android:paddingTop="@dimen/y10"
+                    android:paddingBottom="@dimen/y10"
+                    android:paddingLeft="@dimen/x5"
+                    android:paddingRight="@dimen/x5"
+                    android:layout_below="@id/report_check_free"
+                    android:layout_alignLeft="@id/report_check_free"
+                    android:layout_alignRight="@id/report_check_free"
+                    android:textSize="@dimen/title_right_textsize_22sp"
+                    android:text="私人医生读图"
+                    android:visibility="gone"
+                    android:textColor="@color/text_white"
+                    android:id="@+id/report_private_doctorcheck"/>
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/y10"
+                    android:layout_below="@id/report_private_doctorcheck"
+                    android:background="@drawable/btn_end_selector"
+                    android:textSize="@dimen/title_right_textsize_22sp"
+                    android:text="打印"
+                    android:textColor="@color/text_white"
+                    android:id="@+id/report_print"/>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@id/report_print"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_marginRight="@dimen/x30"
+                    android:layout_marginTop="@dimen/y40"
+                    android:gravity="center_horizontal">
+                    <TextView
+		                android:id="@+id/report_l21_tv"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/prompt_note"
+		                android:textColor="@color/color_7e8799"/>
+                    <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="@dimen/y10"
+		                android:text="@string/worker_time_risk_info"
+		                android:textColor="@color/color_7e8799"/>
+                </LinearLayout>
+        	</RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/current_filter_dialog"
+    android:layout_width="800dp"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/hp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:text="@string/st_tv_baselinefilter"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/hp_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/filter_param"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/hp_005hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_005"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/hp_025hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_025"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/hp_050hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_050"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/hp_off"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_off"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/mc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:text="@string/st_tv_emgfilter"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/mc_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/filter_param"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/mc_25hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_25"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/mc_35hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_35"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/mc_45hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_45"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/mc_off"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_off"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ac_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:text="@string/st_tv_acfilter"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/ac_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/filter_param"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/ac_50hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_50"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/ac_60hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_60"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/ac_off"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_off"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:visibility="invisible" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:text="@string/st_tv_lpfilter"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/lp_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:contentDescription="@string/filter_param"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/lp_25hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_25"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lp_40hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_40"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lp_75hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_75"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lp_100hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_100"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lp_150hz"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_150"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/lp_off"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="@string/filter_off"
+            android:textSize="12sp" />
+    </RadioGroup>
+</LinearLayout>

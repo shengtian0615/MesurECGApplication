@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@color/page_title_bar_color" >
+
+        <TextView
+            android:id="@+id/ecg_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_bloodpress"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="33sp" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btn_back"
+            android:onClick="onBackBottonClick" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="120dp"
+            android:layout_height="fill_parent"
+            android:textSize="25sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="8dip"
+            android:text="@string/save"
+            android:textColor="@color/text_white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
+            
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView android:layout_width="150dp"
+                    android:layout_height="fill_parent"
+	                android:textSize="28sp"
+	                android:id="@+id/blood_press_tesTV"
+	                android:textColor="@color/white_color"
+                    android:text="@string/test_time"/>
+	            <TextView
+	                android:id="@+id/blood_press_time"
+	                android:layout_marginTop="3dp"
+	                android:layout_marginBottom="2dp"
+		            android:textSize="20sp"
+		            android:gravity="center"
+	                android:layout_gravity="center_horizontal"
+	                android:layout_width="200dp"
+	                android:layout_height="fill_parent"
+	                android:background="@drawable/blood_bs_bg" />
+	                
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="45dp" 
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+	                android:layout_width="150dp"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical"
+	                android:text="@string/high_press"
+	                android:id="@+id/blood_tv1"
+	                android:textSize="28sp"
+	                android:textColor="@color/white_color"/>
+                <TextView
+	                android:id="@+id/blood_press_high"
+	                android:layout_width="200dp"
+	                android:textSize="23sp"
+	                android:paddingRight="20dp"
+	                android:gravity="center_vertical|right"
+	                android:layout_marginTop="3dp"
+	                android:layout_marginBottom="2dp"
+	                android:layout_height="fill_parent"
+	                android:background="@drawable/blood_bs_bg"
+	                android:hint="@string/mmhg"/>
+                
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="45dp" 
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+	                android:layout_width="150dp"
+	                android:textSize="28sp"
+	                android:id="@+id/blood_tv2"
+	                android:textColor="@color/white_color"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical"
+	                android:text="@string/low_press"/>
+                <TextView
+	                android:id="@+id/blood_press_low"
+	                android:layout_width="200dp"
+	                android:textSize="23sp"
+	                android:paddingRight="20dp"
+	                android:gravity="center_vertical|right"
+	                android:layout_marginTop="3dp"
+	                android:layout_marginBottom="2dp"
+	                android:layout_height="fill_parent"
+	                android:background="@drawable/blood_bs_bg"
+	                android:hint="@string/mmhg"/>
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="45dp" 
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+	                android:layout_width="150dp"
+	                android:textSize="28sp"
+	                android:id="@+id/blood_tv3"
+	                android:textColor="@color/white_color"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical"
+	                android:text="@string/heart_rate"/>
+                <TextView
+	                android:id="@+id/blood_press_heart"
+	                android:layout_width="200dp"
+	                android:textSize="23sp"
+	                android:paddingRight="20dp"
+	                android:gravity="center_vertical|right"
+	                android:layout_marginTop="3dp"
+	                android:layout_marginBottom="2dp"
+	                android:layout_height="fill_parent"
+	                android:background="@drawable/blood_bs_bg"
+	                android:hint="@string/bpm"/>
+            </LinearLayout>
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/blood_press_numl"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+                <TextView android:id="@+id/blood_press_wheeltitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white_color"/>
+	            <com.wehealth.ui.common.wheel.WheelView
+	                android:layout_below="@id/blood_press_wheeltitle"
+	                android:id="@+id/wheelView_num"
+	                android:layout_width="320dp"
+	                android:layout_height="175dp" />
+	            <LinearLayout android:layout_width="320dp"
+	                android:layout_height="fill_parent"
+	                android:background="@color/text_white"
+	                android:orientation="horizontal"
+	                android:layout_below="@id/wheelView_num">
+	                <Button android:id="@+id/blood_press_numok"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:text="@string/ok"
+	                    android:layout_weight="1"
+	                    android:background="@drawable/red_btn_bg"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="20sp"
+                    	android:textColor="@color/white_color"/>
+	                <Button android:id="@+id/blood_press_numcancel"
+	                    android:layout_width="fill_parent"
+	                    android:layout_weight="1"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="20sp"
+                    	android:textColor="@color/white_color"
+	                    android:background="@drawable/red_btn_bg"
+	                    android:text="@string/cancel"
+	                    android:layout_height="wrap_content"/>
+	            </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:id="@+id/blood_press_line"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <attr name="background_color" format="color" />
+    <attr name="text_color" format="color" />  
+    <attr name="bar_color"  format="color" />
+    <attr name="title_background" format="color"/>
+    
+    <declare-styleable name="SwipyRefreshLayout">
+        <attr name="direction">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="both" value="2" />
+        </attr>
+    </declare-styleable>
+    
+</resources>

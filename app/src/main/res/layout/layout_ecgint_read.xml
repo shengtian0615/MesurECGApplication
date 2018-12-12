@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ecg_read_bgl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_deep"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ect_read_l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <TextView android:text="增益选择"
+            android:textColor="#00ff00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/ecg_tv1" />
+        <RadioGroup
+            android:id="@+id/ecg_wgr"
+            android:layout_toRightOf="@id/ecg_tv1"
+            android:layout_toEndOf="@id/ecg_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/ecg_wg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_bg"
+                android:text="5"
+                android:textColor="#00ff00" />
+
+            <RadioButton
+                android:id="@+id/ecg_wg10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="10"
+                android:button="@drawable/check_bg"
+                android:textColor="#00ff00" />
+
+            <RadioButton
+                android:id="@+id/ecg_wg20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:button="@drawable/check_bg"
+                android:textColor="#00ff00" />
+        </RadioGroup>
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ecg_read_l1"
+            android:layout_alignParentRight="true">
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:text="25mm/s"
+	            android:textColor="#00ff00" />
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:text="5mm/mv"
+	            android:id="@+id/ecg_read_wg"
+	            android:textColor="#00ff00"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ecg_read_fhpflp"
+            android:layout_toLeftOf="@id/ecg_read_l1"
+            android:visibility="gone"
+            android:layout_marginRight="15dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                	android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FHP："
+                    android:textColor="#ff00ff00" />
+
+                <TextView
+                	android:id="@+id/ecg_read_fhp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff00ff00"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                	android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FLP："
+                    android:textColor="#ff00ff00"/>
+
+                <TextView
+                	android:id="@+id/ecg_read_flp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff00ff00"/>
+             </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ecg_read_l2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ecg_read_i3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="I,II,III" />
+
+        <Button
+            android:id="@+id/ecg_read_a3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="aVR,aVL,aVF" />
+
+        <Button
+            android:id="@+id/ecg_read_v1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="V1,V2,V3" />
+
+        <Button
+            android:id="@+id/ecg_read_v4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="V4,V5,V6" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/ecg_read_l2"
+        android:layout_below="@id/ect_read_l1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.wehealth.mesurecg.view.CustomHScrollView
+                android:id="@+id/ect_read_l4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/listview_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="vertical" >
+
+                    <com.wehealth.mesurecg.view.LineIntReadView
+                        android:id="@+id/read_line0"
+                        android:layout_width="1200dp"
+                        android:layout_height="120dp" />
+
+                    <com.wehealth.mesurecg.view.LineIntReadView
+                        android:id="@+id/read_line1"
+                        android:layout_width="1200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="2dp" />
+
+                    <com.wehealth.mesurecg.view.LineIntReadView
+                        android:id="@+id/read_line2"
+                        android:layout_width="1200dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </com.wehealth.mesurecg.view.CustomHScrollView>
+
+            <LinearLayout
+                android:layout_width="60dip"
+                android:layout_height="fill_parent"
+                android:layout_alignLeft="@id/ect_read_l4"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/ecg_read_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:textColor="@android:color/tertiary_text_light"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/ecg_read_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@android:color/tertiary_text_light"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/ecg_read_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@android:color/tertiary_text_light"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
